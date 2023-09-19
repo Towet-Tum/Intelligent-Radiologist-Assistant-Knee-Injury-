@@ -10,6 +10,16 @@ data_ingestion:
 
 
 prepare_model:
+
   root_dir: artifacts/prepare_model
-  model_path: artifacts/prepare_model/yolov8n.pt
+  model_path: artifacts/prepare_model/model
+
+
+
+
+
+training:
+  root_dir: artifacts/training
+ 
+
   
