@@ -20,7 +20,7 @@
 Clone the repository
 
 ```bash
-https://github.com/entbappy/Chicken-Disease-Classification--Project
+https://github.com/Towet-Tum/Intelligent-Radiologist-Assistant-Knee-Injury-
 ```
 ### STEP 01- Create a virtual environment after opening the repository
 
