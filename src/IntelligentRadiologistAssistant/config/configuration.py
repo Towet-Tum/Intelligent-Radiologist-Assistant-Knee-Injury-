@@ -1,6 +1,6 @@
 from IntelligentRadiologistAssistant.constants import *
 from IntelligentRadiologistAssistant.utils.common import read_yaml, create_directories
-from IntelligentRadiologistAssistant.entity.config_entity import DataIngestionConfig
+from IntelligentRadiologistAssistant.entity.config_entity import DataIngestionConfig, TrainingConfig
 
 class ConfigurationManager:
     def __init__(
@@ -28,3 +28,21 @@ class ConfigurationManager:
         )
 
         return data_ingestion_config
+    
+    def training_config(self) -> TrainingConfig:
+        training = self.config.training
+        params = self.params
+        
+        training_data = self.config.data_ingestion.unzip_dir
+        create_directories([
+            Path(training.root_dir)
+        ])
+
+        training_config = TrainingConfig(
+            root_dir=Path(training.root_dir),
+            params_epochs=params.EPOCHS,
+            params_image_size=params.IMAGE_SIZE,
+            training_data=Path(training_data),
+        )
+
+        return training_config
