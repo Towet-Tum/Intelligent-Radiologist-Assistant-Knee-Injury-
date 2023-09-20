@@ -9,13 +9,6 @@ data_ingestion:
 
 
 
-prepare_model:
-
-  root_dir: artifacts/prepare_model
-  model_path: artifacts/prepare_model/model
-
-
-
 
 
 training:
